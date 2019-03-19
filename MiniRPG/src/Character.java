@@ -20,10 +20,18 @@ public class Character {
         name = _name;
         element = _element;
         MAX_HP = _hp;
-        hp = _hp;
+        hp = MAX_HP;
         MAX_MANA = _mana;
-        mana = _mana;
+        mana = MAX_MANA;
         CLASS = _class;
+    }
+
+    public int getMaxHP() {
+        return MAX_HP;
+    }
+
+    public int getMaxMana() {
+        return MAX_MANA;
     }
 
     public void setEquipement(Equipement _equipement) {
@@ -36,6 +44,46 @@ public class Character {
 
     public void setArmor(Body _armor) {
         armor = _armor;
+    }
+
+    public Element getElement() {
+        return element;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public WeaponClasses getWClass() {
+        return CLASS;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Equipement getEquipement() {
+        return equipement;
+    }
+
+    public Helmet getHelmet() {
+        return helmet;
+    }
+
+    public Body getArmor() {
+        return armor;
+    }
+
+    public Leggings getLeggings() {
+        return leggings;
     }
 
     public void setLeggings(Leggings _leggings) {
