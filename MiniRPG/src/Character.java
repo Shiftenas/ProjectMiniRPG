@@ -1,4 +1,5 @@
 import attacks.Element;
+import features.Equipement;
 import features.Weapon;
 import features.WeaponClasses;
 
@@ -10,10 +11,14 @@ public class Character {
     private int mana;
     private final WeaponClasses CLASS;
     private Weapon weapon;
+    private String nom;
+    private Equipement equipement;
+    //private Armor armor;
 
 
-    public Character(Element element, int _hp, int _mana, WeaponClasses _class) {
-        this.element = element;
+    public Character(String _nom, Element _element, int _hp, int _mana, WeaponClasses _class) {
+        nom = _nom;
+        element = _element;
         MAX_HP = _hp;
         hp = _hp;
         MAX_MANA = _mana;
