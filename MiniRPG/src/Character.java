@@ -34,6 +34,33 @@ public class Character {
         return MAX_MANA;
     }
 
+    public void hurt(int damage) {
+        hp -= damage;
+        if (hp < 0) hp = 0;
+    }
+
+    public void heal(int life) {
+        hp += life;
+        if (hp > MAX_HP) hp = MAX_HP;
+    }
+
+    public void magic(int cost) {
+        mana -= cost;
+        if (mana < 0) {
+            System.err.println("Error : Not enough mana, can't forced magic attack.");
+            System.exit(1);
+        }
+    }
+
+    public boolean canMagic(int cost) {
+        return mana >= cost;
+    }
+
+    public void regenerateMana(int manaHeal) {
+        mana += manaHeal;
+        if (mana >= MAX_MANA) mana = MAX_MANA;
+    }
+
     public void setEquipement(Equipement _equipement) {
         equipement = _equipement;
     }
