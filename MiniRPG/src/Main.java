@@ -1,7 +1,11 @@
-import static attacks.Element.*;
+import attacks.*;
+import features.*;
+
 
 public class Main {
     public static void main(String[] args) {
-        Fighter c = new Fighter("Tester",new attacks.Element(NONE),100,5,features.WeaponClasses.SWORD);
+        Player player = Player.createPlayer(100,100);
+        Fighter ennemy = new Fighter("Ennemy", new Element(Element.NONE), 50, 50, WeaponClasses.MAGIC);
+        System.out.println(player);
     }
 }

@@ -122,4 +122,21 @@ public class Fighter {
         return leggings;
     }
 
+    @Override
+    public String toString() {
+        return "Fighter{" +
+                "element=" + element +
+                ", MAX_HP=" + MAX_HP +
+                ", hp=" + hp +
+                ", MAX_MANA=" + MAX_MANA +
+                ", mana=" + mana +
+                ", CLASS=" + CLASS +
+                ", weapon=" + weapon +
+                ", name='" + name + '\'' +
+                ", equipement=" + equipement +
+                ", helmet=" + helmet +
+                ", armor=" + armor +
+                ", leggings=" + leggings +
+                '}';
+    }
 }
