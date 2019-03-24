@@ -1,22 +1,23 @@
-import attacks.Element;
 import features.*;
+import attacks.*;
 
-public class Character {
+public class Fighter {
     private Element element;
     private final int MAX_HP;
     private int hp;
     private final int MAX_MANA;
     private int mana;
-    private final WeaponClasses CLASS;
-    private Weapon weapon;
+    private final features.WeaponClasses CLASS;
+    private features.Weapon weapon;
     private String name;
-    private Equipement equipement;
-    private Helmet helmet;
-    private Body armor;
-    private Leggings leggings;
+    private features.Equipement equipement;
+    private features.Helmet helmet;
+    private features.Body armor;
+    private features.Leggings leggings;
+    //private String appearance
 
 
-    public Character(String _name, Element _element, int _hp, int _mana, WeaponClasses _class) {
+    public Fighter(String _name, Element _element, int _hp, int _mana, WeaponClasses _class) {
         name = _name;
         element = _element;
         MAX_HP = _hp;
@@ -24,6 +25,10 @@ public class Character {
         MAX_MANA = _mana;
         mana = MAX_MANA;
         CLASS = _class;
+        weapon = new Weapon("Fist",_class,1);
+        helmet = null;
+        armor = null;
+        leggings = null;
     }
 
     public int getMaxHP() {
@@ -47,7 +52,7 @@ public class Character {
     public void magic(int cost) {
         mana -= cost;
         if (mana < 0) {
-            System.err.println("Error : Not enough mana, can't forced magic attack.");
+            System.err.println("Error : Not enough mana, can't force magic attack.");
             System.exit(1);
         }
     }
@@ -61,16 +66,20 @@ public class Character {
         if (mana >= MAX_MANA) mana = MAX_MANA;
     }
 
-    public void setEquipement(Equipement _equipement) {
+    public void setEquipement(features.Equipement _equipement) {
         equipement = _equipement;
     }
 
-    public void setHelmet(Helmet _helmet) {
+    public void setHelmet(features.Helmet _helmet) {
         helmet = _helmet;
     }
 
-    public void setArmor(Body _armor) {
+    public void setArmor(features.Body _armor) {
         armor = _armor;
+    }
+
+    public void setLeggings(Leggings _leggings) {
+        leggings = _leggings;
     }
 
     public Element getElement() {
@@ -113,7 +122,4 @@ public class Character {
         return leggings;
     }
 
-    public void setLeggings(Leggings _leggings) {
-        leggings = _leggings;
-    }
 }

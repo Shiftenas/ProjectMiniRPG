@@ -11,11 +11,11 @@ public class Weapon {
         INITIAL_DAMAGE = initial_damage;
     }
 
-    public int getINITIAL_DAMAGE() {
+    public int getInitialDamage() {
         return INITIAL_DAMAGE;
     }
 
-    public WeaponClasses getCLASS() {
+    public WeaponClasses getWClass() {
         return CLASS;
     }
 }

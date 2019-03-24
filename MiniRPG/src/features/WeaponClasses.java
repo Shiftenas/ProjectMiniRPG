@@ -1,7 +1,7 @@
 package features;
 
 public enum WeaponClasses {
-    MAGIE,
+    MAGIC,
     SWORD,
     BOW,
     GUN
